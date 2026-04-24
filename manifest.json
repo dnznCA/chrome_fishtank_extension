@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Tab Tank 🐠",
+  "version": "1.0",
+  "description": "A relaxing pixel fishtank in your browser tab bar!",
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "sprites.js",
+        "ecosystem.js",
+        "engine.js",
+        "content.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_title": "Tab Tank"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "assets/*.png"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
+}
